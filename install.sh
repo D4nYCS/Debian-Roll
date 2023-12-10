@@ -25,7 +25,7 @@ chown -R $username:$username /home/$username
 # Installing Essential Programs 
 nala install kitty thunar unzip wget -y
 # Installing Other less important Programs
-nala install lightdm xrdp lxde task-lxde-desktop tmux -y
+nala install xrdp xorgxrdp task-lxde-desktop tmux -y
 
 # Install chrome-browser
 nala install apt-transport-https curl -y
@@ -33,11 +33,6 @@ curl -fSsL https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmo
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
 nala update
 nala install google-chrome-stable -y
-
-# Enable graphical login, change target from CLI to GUI and Remote Login
-systemctl enable lightdm
-systemctl set-default graphical.target
-systemctl enable xrdp
 
 # Use nala
 bash scripts/usenala
