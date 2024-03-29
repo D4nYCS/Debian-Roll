@@ -25,7 +25,7 @@ chown -R $username:$username /home/$username
 # Installing Essential Programs 
 nala install kitty thunar unzip wget -y
 # Installing Other less important Programs
-nala install xrdp xorgxrdp task-lxde-desktop tmux -y
+nala install xrdp xorgxrdp kde-plasma-desktop tmux -y
 
 # Install chrome-browser
 nala install apt-transport-https curl -y
